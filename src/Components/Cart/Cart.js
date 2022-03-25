@@ -4,13 +4,13 @@ import "./Cart.css";
 const Cart = (props) => {
   return (
     <div className="cart">
-      <h1>Order Summary</h1>
+      <h1>Selected Laptops</h1>
       <div className="text">
         <p>Selected Items: </p>
-        <p>Total Price: $ </p>
-        <p>Total Shipping Charge: $</p>
-        <p>Tax: $ </p>
-        <h3>Grand Total: $ </h3>
+        <div className="my-btn">
+          <button>CHOOSE 1 FOR ME</button>
+          <button>CHOOSE AGAIN</button>
+        </div>
       </div>
     </div>
   );

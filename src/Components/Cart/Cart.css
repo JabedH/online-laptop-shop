@@ -14,3 +14,10 @@
   margin-bottom: 30px;
   margin-top: 30px;
 }
+.my-btn {
+  display: grid;
+  gap: 10px;
+}
+.my-btn button {
+  padding: 10px;
+}
