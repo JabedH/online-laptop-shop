@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./Cart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Cart = (props) => {
+  const { allDelete, setDelete } = useState();
+  const deleteCart = (item) => {
+    console.log(item);
+  };
   const { cart } = props;
-  console.log(props);
+  console.log(props.cart);
   return (
     <div className="cart">
       <h1>Selected Laptops</h1>
@@ -15,8 +19,7 @@ const Cart = (props) => {
             <img src={item.img} alt="" />
             <h5>{item.name}</h5>
             {/* <FontAwesomeIcon icon={faShoppingCart} /> */}
-            <a href="#">
-              {" "}
+            <a href="#" key={item.id} onClick={deleteCart}>
               <FontAwesomeIcon icon={faTrash} />
             </a>
           </div>

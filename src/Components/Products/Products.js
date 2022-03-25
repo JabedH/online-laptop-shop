@@ -5,6 +5,7 @@ import SingleProduct from "../SingleProduct/SingleProduct";
 
 const Products = () => {
   const [product, setProduct] = useState([]);
+  console.log(product);
   const [cart, setCart] = useState([]);
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
