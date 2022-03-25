@@ -9,7 +9,7 @@
 .main-cart {
   background-color: #ffe1b5;
 }
-/* @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .products {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -32,4 +32,4 @@
   .main-cart {
     order: 0;
   }
-} */
+}
