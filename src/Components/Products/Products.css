@@ -9,3 +9,27 @@
 .main-cart {
   background-color: #ffe1b5;
 }
+@media screen and (max-width: 900px) {
+  .products {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .products {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .product {
+    display: grid;
+    grid-template-columns: 1fr;
+    order: 1;
+  }
+  .main-cart {
+    order: 0;
+  }
+}
