@@ -13,8 +13,11 @@ const Products = () => {
   // random product
   const getRandom = (cart) => {
     const rand = cart[(Math.random() * cart.length) | 0];
-    // const rand = Math.floor(Math.random() * cart.length);
-    setRen(rand);
+    if (rand.length === 0) {
+      return;
+    } else {
+      setRen(rand);
+    }
   };
   // remove all
 
@@ -95,8 +98,6 @@ const Products = () => {
           <Cart
             setCart={setCart}
             getRandom={getRandom}
-            // removeItem={removeItem}
-
             setRen={setRen}
             ran={ran}
             cart={cart}
