@@ -21,7 +21,6 @@ const Products = () => {
   // cart data
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
-    console.log(cart);
     if (cart.length > 3) {
       alert("Your cart is full");
     } else {
