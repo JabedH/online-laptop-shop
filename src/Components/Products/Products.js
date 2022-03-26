@@ -92,6 +92,7 @@ const Products = () => {
             </p>
           </div>
         </div>
+        {/* cart */}
         <div className="main-cart">
           <Cart
             setCart={setCart}

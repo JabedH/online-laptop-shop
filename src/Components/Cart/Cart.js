@@ -4,7 +4,7 @@ import "./Cart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Cart = (props) => {
-  const { cart, getRandom, ran, setCart, removeOne, setRen } = props;
+  const { cart, getRandom, ran, setCart, setRen } = props;
 
   return (
     <div className="cart">
@@ -14,7 +14,7 @@ const Cart = (props) => {
           <div className="item" key={item.id}>
             <img src={item.img} alt="" />
             <h5>{item.name}</h5>
-            <a href="#" onClick={() => removeOne(cart.id)}>
+            <a href="#">
               <FontAwesomeIcon icon={faTrash} />
             </a>
           </div>
