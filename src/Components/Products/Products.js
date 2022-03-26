@@ -12,7 +12,8 @@ const Products = () => {
   console.log(ran);
   // random product
   const getRandom = (cart) => {
-    var rand = cart[(Math.random() * cart.length) | 0];
+    const rand = cart[(Math.random() * cart.length) | 0];
+    // const rand = Math.floor(Math.random() * cart.length);
     setRen(rand);
   };
   // remove all
@@ -20,7 +21,12 @@ const Products = () => {
   // cart data
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
-    setCart(newCart);
+    if (cart.length > 3) {
+      alert("Your cart is full");
+    } else {
+      setCart(newCart);
+    }
+
     console.log(newCart);
     // console.log(newCart);
   };

@@ -18,7 +18,7 @@ const Cart = (props) => {
             </a>
           </div>
         ))}
-        <div></div>
+
         <div className="my-btn">
           <button onClick={() => getRandom(cart)}>CHOOSE 1 FOR ME</button>
           <button onClick={() => setCart([])}>CHOOSE AGAIN</button>
