@@ -4,10 +4,8 @@ import "./Cart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Cart = (props) => {
-  const { cart, getRandom, ran, setCart, setRen } = props;
-  const myFun = () => {
-    const setCart = (cart = {});
-  };
+  const { cart, getRandom, ran, setCart, removeOne, setRen } = props;
+
   return (
     <div className="cart">
       <h1>Selected Laptops</h1>
@@ -16,19 +14,20 @@ const Cart = (props) => {
           <div className="item" key={item.id}>
             <img src={item.img} alt="" />
             <h5>{item.name}</h5>
-            <a href="#">
+            <a href="#" onClick={() => removeOne(cart.id)}>
               <FontAwesomeIcon icon={faTrash} />
             </a>
           </div>
         ))}
 
         <div className="my-btn">
-          <button onClick={() => getRandom(cart)}>CHOOSE 1 FOR ME</button>
-          <button onClick={() => setCart([])}>CHOOSE AGAIN</button>
+          {/* show random product */}
           <div className="item">
             <img src={ran.img} alt="" />
             <h5> {ran.name}</h5>
           </div>
+          <button onClick={() => getRandom(cart)}>CHOOSE 1 FOR ME</button>
+          <button onClick={() => setCart([]) & setRen([])}>CHOOSE AGAIN</button>
         </div>
       </div>
     </div>

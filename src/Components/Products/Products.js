@@ -5,22 +5,19 @@ import SingleProduct from "../SingleProduct/SingleProduct";
 
 const Products = () => {
   const [products, setProduct] = useState([]);
-  console.log(products);
   const [cart, setCart] = useState([]);
   const [ran, setRen] = useState([]);
 
-  console.log(ran);
   // random product
   const getRandom = (cart) => {
     const rand = cart[(Math.random() * cart.length) | 0];
-    if (rand.length === 0) {
+    console.log(ran);
+    if (rand == undefined) {
       return;
     } else {
       setRen(rand);
     }
   };
-  // remove all
-
   // cart data
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
@@ -30,9 +27,10 @@ const Products = () => {
     } else {
       setCart(newCart);
     }
-
-    console.log(newCart);
-    // console.log(newCart);
+  };
+  // remove one item
+  const removeOne = (card) => {
+    console.log(card.id);
   };
   useEffect(() => {
     fetch("data.json")
@@ -101,6 +99,7 @@ const Products = () => {
             setRen={setRen}
             ran={ran}
             cart={cart}
+            removeOne={removeOne}
           />
         </div>
       </div>
