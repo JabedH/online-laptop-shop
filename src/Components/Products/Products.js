@@ -7,6 +7,8 @@ const Products = () => {
   const [products, setProduct] = useState([]);
   console.log(products);
   const [cart, setCart] = useState([]);
+  // random product
+
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
     setCart(newCart);

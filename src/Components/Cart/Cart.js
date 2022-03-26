@@ -5,6 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Cart = (props) => {
   const { cart } = props;
+  // random number
+  const getRandom = (cart) => {
+    // const random = Math.random(getData);
+    var rand = cart[(Math.random() * cart.length) | 0];
+    console.log(rand.name);
+    return rand.name;
+  };
   return (
     <div className="cart">
       <h1>Selected Laptops</h1>
@@ -18,12 +25,11 @@ const Cart = (props) => {
             </a>
           </div>
         ))}
-        <div>
-          <h1>{cart.name}</h1>
-        </div>
+        <div></div>
         <div className="my-btn">
-          <button>CHOOSE 1 FOR ME</button>
+          <button onClick={() => getRandom(cart)}>CHOOSE 1 FOR ME</button>
           <button>CHOOSE AGAIN</button>
+          <h1></h1>
         </div>
       </div>
     </div>
