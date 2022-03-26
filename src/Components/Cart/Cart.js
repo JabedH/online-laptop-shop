@@ -27,7 +27,10 @@ const Cart = (props) => {
         <div className="my-btn">
           <button onClick={() => getRandom(cart)}>CHOOSE 1 FOR ME</button>
           <button>CHOOSE AGAIN</button>
-          <h1> {ran}</h1>
+          <div className="item">
+            <img src={ran.img} alt="" />
+            <h5> {ran.name}</h5>
+          </div>
         </div>
       </div>
     </div>

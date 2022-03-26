@@ -12,8 +12,7 @@ const Products = () => {
   // random product
   const getRandom = (cart) => {
     var rand = cart[(Math.random() * cart.length) | 0];
-    console.log(rand.name);
-    setRen(rand.name);
+    setRen(rand);
   };
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
