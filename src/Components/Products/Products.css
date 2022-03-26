@@ -9,6 +9,12 @@
 .main-cart {
   background-color: #ffe1b5;
 }
+.questions {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
 @media screen and (max-width: 900px) {
   .products {
     display: grid;

@@ -21,6 +21,7 @@ const Products = () => {
   // cart data
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
+    console.log(cart);
     if (cart.length > 3) {
       alert("Your cart is full");
     } else {
@@ -36,24 +37,51 @@ const Products = () => {
       .then((data) => setProduct(data));
   }, []);
   return (
-    <div className="products">
-      <div className="product">
-        {products.map((product) => (
-          <SingleProduct
-            key={product.id}
-            product={product}
-            addToCart={addToCart}
+    <div>
+      <div className="products">
+        <div className="product">
+          {products.map((product) => (
+            <SingleProduct
+              key={product.id}
+              product={product}
+              addToCart={addToCart}
+            />
+          ))}
+
+          <div className="questions">
+            <h3>How does react works</h3>
+            <p>
+              React is a JavaScript library. That creates(UI) in a predictable
+              and efficient. Before Our traditional DOM was very slow for this
+              reason a team of facebook created react app and make it faster.
+              react work with a virtual DOM that is basically a DOM tree
+              representation in JavaScript. So when it needs to write or read to
+              the DOM that will use the virtual representation of it. when there
+              is needs any update in the virtual DOM react compares the virtual
+              DOM with a snapshot of the virtual before the update. With the
+              help of this comparison React figures out which components in the
+              UI needs to be updated.
+            </p>
+          </div>
+
+          <div>
+            <h1>hi</h1>
+          </div>
+          <div>
+            <h1>hi</h1>
+          </div>
+        </div>
+        <div className="main-cart">
+          <Cart
+            setCart={setCart}
+            getRandom={getRandom}
+            // removeItem={removeItem}
+
+            setRen={setRen}
+            ran={ran}
+            cart={cart}
           />
-        ))}
-      </div>
-      <div className="main-cart">
-        <Cart
-          setCart={setCart}
-          getRandom={getRandom}
-          // removeItem={removeItem}
-          ran={ran}
-          cart={cart}
-        />
+        </div>
       </div>
     </div>
   );

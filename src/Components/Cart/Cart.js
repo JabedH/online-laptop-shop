@@ -4,7 +4,10 @@ import "./Cart.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Cart = (props) => {
-  const { cart, getRandom, ran, setCart } = props;
+  const { cart, getRandom, ran, setCart, setRen } = props;
+  const myFun = () => {
+    const setCart = (cart = {});
+  };
   return (
     <div className="cart">
       <h1>Selected Laptops</h1>
