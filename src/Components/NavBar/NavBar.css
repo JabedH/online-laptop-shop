@@ -11,3 +11,11 @@
   text-decoration: none;
   color: white;
 }
+@media screen and (max-width: 600px) {
+  .navbar-item {
+    display: flex;
+  }
+  .navbar {
+    font-size: 13px;
+  }
+}
