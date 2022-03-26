@@ -7,8 +7,14 @@ const Products = () => {
   const [products, setProduct] = useState([]);
   console.log(products);
   const [cart, setCart] = useState([]);
+  const [ran, setRen] = useState([]);
+  console.log(ran);
   // random product
-
+  const getRandom = (cart) => {
+    var rand = cart[(Math.random() * cart.length) | 0];
+    console.log(rand.name);
+    setRen(rand.name);
+  };
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
     setCart(newCart);
@@ -32,7 +38,7 @@ const Products = () => {
         ))}
       </div>
       <div className="main-cart">
-        <Cart cart={cart} />
+        <Cart getRandom={getRandom} ran={ran} cart={cart} />
       </div>
     </div>
   );
