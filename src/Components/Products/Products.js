@@ -8,12 +8,16 @@ const Products = () => {
   console.log(products);
   const [cart, setCart] = useState([]);
   const [ran, setRen] = useState([]);
+
   console.log(ran);
   // random product
   const getRandom = (cart) => {
     var rand = cart[(Math.random() * cart.length) | 0];
     setRen(rand);
   };
+  // remove all
+
+  // cart data
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
     setCart(newCart);
@@ -37,7 +41,13 @@ const Products = () => {
         ))}
       </div>
       <div className="main-cart">
-        <Cart getRandom={getRandom} ran={ran} cart={cart} />
+        <Cart
+          setCart={setCart}
+          getRandom={getRandom}
+          // removeItem={removeItem}
+          ran={ran}
+          cart={cart}
+        />
       </div>
     </div>
   );
