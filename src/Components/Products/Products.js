@@ -4,12 +4,13 @@ import "./Products.css";
 import SingleProduct from "../SingleProduct/SingleProduct";
 
 const Products = () => {
-  const [product, setProduct] = useState([]);
-  console.log(product);
+  const [products, setProduct] = useState([]);
+  console.log(products);
   const [cart, setCart] = useState([]);
   const addToCart = (cartData) => {
     const newCart = [...cart, cartData];
     setCart(newCart);
+    console.log(newCart);
     // console.log(newCart);
   };
   useEffect(() => {
@@ -20,8 +21,12 @@ const Products = () => {
   return (
     <div className="products">
       <div className="product">
-        {product.map((pro) => (
-          <SingleProduct product={pro} key={pro.id} addToCart={addToCart} />
+        {products.map((product) => (
+          <SingleProduct
+            key={product.id}
+            product={product}
+            addToCart={addToCart}
+          />
         ))}
       </div>
       <div className="main-cart">
