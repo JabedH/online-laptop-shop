@@ -64,11 +64,31 @@ const Products = () => {
             </p>
           </div>
 
-          <div>
-            <h1>hi</h1>
+          <div className="questions">
+            <h3>How useState() work?</h3>
+            <p>
+              useState() is a function that allows having state variables in
+              functional components. we can pass the initial state to this
+              function and it returns a variable with the current state value
+              and another function to update this value. If we want to use the
+              previous value to update the state, we must pass that receives the
+              previous value and returns an updated value. useState() work with
+              asynchronous way. we will not get value a synchronous way, for
+              this reason, we have to follow a few rules to get the value
+              synchronous way.
+            </p>
           </div>
-          <div>
-            <h1>hi</h1>
+          <div className="questions">
+            <h3>Props vs State</h3>
+            <p>
+              <b>props</b> <br /> #) The Data is passed from one component to
+              another. <br />
+              #) It is can not be modified. <br /> #) Props are read-only.{" "}
+              <br />
+              <b>State</b> <br /> #) The Data is passed within the component
+              only. <br />
+              #) It is can be modified. <br /> #) State is both read and write.
+            </p>
           </div>
         </div>
         <div className="main-cart">
